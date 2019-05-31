@@ -223,7 +223,15 @@ def post_volunteers(data):
             continue
             
 		# Get volunteers attending at the event
-        volunteers = get_volunteers(service_id, upcoming_plan_id, location_id, event_id, event_period_id, service_time_ids_to_time, event_time_to_id)
+        volunteers = get_volunteers(
+			service_id,
+			upcoming_plan_id,
+			location_id,
+			event_id,
+			event_period_id,
+			service_time_ids_to_time,
+			event_time_to_id
+		)
         break
     else:
         raise LookupError(f'Can not find future service with event times {event_time_to_id}')
