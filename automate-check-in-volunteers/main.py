@@ -8,8 +8,9 @@ import ast
 
 
 """ Set up planing centre login details """
+# Your normal login details you use to login into planning centre
 login_data = dict(
-    os.environ['EMAIL'],
+    email=os.environ['EMAIL'],
     password=os.environ['PASSWORD']
 )
 
